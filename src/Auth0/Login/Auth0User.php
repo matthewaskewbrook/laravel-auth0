@@ -2,11 +2,13 @@
 
 namespace Auth0\Login;
 
+use Illuminate\Foundation\Auth\User;
+
 /**
  * This class represents a generic user initialized with the user information
  * given by Auth0 and provides a way to access to the user profile.
  */
-class Auth0User implements \Illuminate\Contracts\Auth\Authenticatable
+class Auth0User extends User
 {
     protected $userInfo;
     protected $accessToken;
